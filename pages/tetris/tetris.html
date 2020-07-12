@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Martin Holding | Tetris</title>
+        <script src="tetrisMain.js"> </script> <!--Linking script here means I need to add a DOM evt listener in JS to make sure this is read AFTER the html as loaded.-->
+        <link rel="stylesheet" type = "text/css" href="tetrisStyles.css"> </link>
+        <link rel="stylesheet" type = "text/css" href="/styles.css">
+    </head>
+    <body>
+         <!-- Main Title Banner-->
+         <div class="banner-container" id="title-banner">
+            <div id="banner-text">
+                <h1>I am developing. I am Martin.</h1>
+                <a href="../../main.html"> <p>Home</p></a>
+                
+            </div>
+        </div>
+        <!-- Game Container -->
+        <div id="instructions-container">
+            <h2>TETRIS</h2>
+            <p> A clone of Tetris. Made with vanilla Javascript.</p>
+            <h2>Instructions</h2>
+            <ul>
+                <li> Press up to rotate shape </li>
+                <li> Press left/right to move shape </li>
+                <li> Press down to move faster </li>
+            </ul>
+        </div>
+        <div class="score-container">
+            <h3>Score: <span id="score"> 0</span></h3>
+            <button id="start-button">Start/Pause</button>
+        </div>
+        <div id="container">
+            <div class="grid"> 
+            <!--Create 200(!) divs to make a grid..can definitely replace this with a for loop later-->
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="taken"></div> 
+                <div class="taken"></div> 
+                <div class="taken"></div> 
+                <div class="taken"></div> 
+                <div class="taken"></div> 
+                <div class="taken"></div> 
+                <div class="taken"></div> 
+                <div class="taken"></div> 
+                <div class="taken"></div> 
+                <div class="taken"></div> 
+            </div>
+            <div class="mini-grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </body>
+    <footer class="banner-container", id="footer-banner">
+        <p>Martin Holding <br> Copyright 2020 <br> Like what you see? Drop me a <a target="_blank" href="mailto:martinholding89@gmail.com">line!</a></p>
+        <a target="_blank" href="https://twitter.com/I_am_holding"><img src="../../images/Twitter_Logo_Blue.png"></a>
+        <a target="_blank" href="https://github.com/MartinHolding"><img src="../../images/GitHub-Mark-32px.png"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/martinholding/"><img src="../../images/LI-In-Bug.png"></a>
+    </footer>
+
+</html>
